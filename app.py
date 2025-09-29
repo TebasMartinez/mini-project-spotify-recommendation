@@ -24,11 +24,11 @@ def main():
 
         st.session_state.genre = st.selectbox("Choose a genre", ["Trendy", "Other"], placeholder="Choose a genre")
 
-        if st.session_state.genre == "Trendy":
-            f.play_song(f.choose_random_song(sp, st.session_state.trendy)) #song_id
-
-        else:
-            st.text("Other genres will be added soon!")
+        if center.button("Recommend!"):
+            if st.session_state.genre == "Trendy":
+                f.play_song(f.choose_random_song(sp, st.session_state.trendy))
+            else:
+                st.text("Other genres will be added soon!")
 
 
 if __name__ == '__main__':
