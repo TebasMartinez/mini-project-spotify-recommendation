@@ -1,1 +1,1 @@
-# Mini Project Spotify Recommendation
+# Mini Project: Spotify Recommendation
