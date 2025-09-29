@@ -1,7 +1,9 @@
 from bs4 import BeautifulSoup
 from IPython.display import IFrame
 import pandas as pd
+import random
 import requests
+import streamlit as st
 
 def find_top100():
     url = "https://www.billboard.com/charts/hot-100/"
@@ -23,11 +25,13 @@ def find_top100():
 
     return top100
 
-def play_song(track_id):
-    return IFrame(src="https://open.spotify.com/embed/track/"+track_id,
-       width="320",
-       height="80",
-       frameborder="0",
-       allowtransparency="true",
-       allow="encrypted-media",
-      )
+def play_song(track_id, position):
+    embed_url = f"https://open.spotify.com/embed/track/{track_id}"
+    with position:
+        st.components.v1.iframe(embed_url, width=320, height=80)
+
+def choose_random_song(sp, genre_df):
+    song_title = random.choice(genre_df['title'])
+    song_info = sp.search(q=song_title,limit=5,market="GB")
+    track_id = song_info["tracks"]["items"][0]["id"]
+    return track_id
