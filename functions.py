@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from IPython.display import IFrame
 import pandas as pd
 import requests
 
@@ -21,3 +22,12 @@ def find_top100():
     })
 
     return top100
+
+def play_song(track_id):
+    return IFrame(src="https://open.spotify.com/embed/track/"+track_id,
+       width="320",
+       height="80",
+       frameborder="0",
+       allowtransparency="true",
+       allow="encrypted-media",
+      )
