@@ -19,11 +19,13 @@ def main():
         st.session_state.trendy = f.find_top100()
 
     # App
-    st.session_state.genre = st.selectbox("Choose a genre", ["Trendy", "Other"])
+    left, center, right = st.columns([1,3,1])
+    with center:
 
-    left, center, right = st.columns([1,2,1])
-    if st.session_state.genre == "Trendy":
-        f.play_song(f.choose_random_song(sp, st.session_state.trendy), center) #song_id
+        st.session_state.genre = st.selectbox("Choose a genre", ["Trendy", "Other"], placeholder="Choose a genre")
+
+        if st.session_state.genre == "Trendy":
+            f.play_song(f.choose_random_song(sp, st.session_state.trendy)) #song_id
 
 
 if __name__ == '__main__':

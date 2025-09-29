@@ -24,10 +24,9 @@ def find_top100():
 
     return top100
 
-def play_song(track_id, position):
+def play_song(track_id):
     embed_url = f"https://open.spotify.com/embed/track/{track_id}"
-    with position:
-        st.components.v1.iframe(embed_url, width=320, height=80)
+    st.components.v1.iframe(embed_url, width="stretch", height="stretch")
 
 def choose_random_song(sp, genre_df):
     song_title = random.choice(genre_df['title'])
