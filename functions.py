@@ -1,9 +1,11 @@
 from bs4 import BeautifulSoup
 import pandas as pd
+import pickle
 import random
 import requests
 import streamlit as st
 
+#### STREAMLIT APP FUNCTIONS ####
 def find_top100():
     url = "https://www.billboard.com/charts/hot-100/"
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}
@@ -33,3 +35,18 @@ def choose_random_song(sp, genre_df):
     song_info = sp.search(q=song_title,limit=5,market="GB")
     track_id = song_info["tracks"]["items"][0]["id"]
     return track_id
+
+#### DATA NOTEBOOKS FUNCTIONS ####
+
+def save(model):
+    model_name = input()
+    with open(model_name+".pkl", "wb") as f:
+        pickle.dump(model, f)
+
+def load(filename = "filename.pickle"): 
+    try: 
+        with open(filename, "rb") as f: 
+            return pickle.load(f) 
+        
+    except FileNotFoundError: 
+        print("File not found!") 
