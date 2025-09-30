@@ -36,7 +36,7 @@ def choose_random_song(sp, genre_df):
     track_id = song_info["tracks"]["items"][0]["id"]
     return track_id
 
-#### DATA NOTEBOOKS FUNCTIONS ####
+#### NOTEBOOKS FUNCTIONS ####
 
 def save(model):
     model_name = input()
