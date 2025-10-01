@@ -36,7 +36,7 @@ def choose_random_trendy(spotify, trendy_df):
     track_id = song_info["tracks"]["items"][0]["id"]
     return track_id
 
-#### NOTEBOOKS FUNCTIONS ####
+#### ML MODEL FUNCTIONS ####
 
 def save(model):
     model_name = input()
