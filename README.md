@@ -1,8 +1,17 @@
 # Mini Project: Spotify Recommendation
 
+Streamlit-powered music recommender. It recommends one of the top 100 songs from Billboard if the user chooses "trendy", or a random song from a given dataset clustered with KMeans when a user chooses another option.
+
+## Demo
+
+--- Demo here ---
+
 ## Data
 
-### Audio features
+### `audio_features_dataset_curated.csvz`
+Provided by Ironhack to work on this mini project.
+
+#### Audio features
 Description from [Spotify's API site](https://developer.spotify.com/documentation/web-api/reference/get-audio-features):
 
 - acousticness
@@ -83,3 +92,6 @@ Description from [Spotify's API site](https://developer.spotify.com/documentatio
   - A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).
   - Range: 0 - 1
   - Example: 0.428
+
+### Top 100 songs
+Web Scraped from [Billboard 100](https://www.billboard.com/charts/hot-100/).
