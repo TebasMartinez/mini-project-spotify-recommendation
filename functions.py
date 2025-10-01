@@ -30,9 +30,9 @@ def play_song(track_id):
     embed_url = f"https://open.spotify.com/embed/track/{track_id}"
     st.components.v1.iframe(embed_url, width=None, height=250)
 
-def choose_random_song(sp, genre_df):
-    song_title = random.choice(genre_df['title'])
-    song_info = sp.search(q=song_title,limit=5,market="GB")
+def choose_random_trendy(spotify, trendy_df):
+    song_title = random.choice(trendy_df['title'])
+    song_info = spotify.search(q=song_title,limit=5,market="GB")
     track_id = song_info["tracks"]["items"][0]["id"]
     return track_id
 
