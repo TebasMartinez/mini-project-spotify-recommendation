@@ -33,30 +33,15 @@ Description from [Spotify's API site](https://developer.spotify.com/documentatio
   - Range: 0 - 1
   - Example: 0.00242
 
-- analysis_url
-  - string
-  - A URL to access the full audio analysis of this track. An access token is required to access this data.
-  - Example: "https://api.spotify.com/v1/audio-analysis/2takcwOaAZWiXQijPHIx7B"
-
 - danceability
   - number [float]
   - Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.
   - Example: 0.585
 
-- duration_ms
-  - integer
-  - The duration of the track in milliseconds.
-  - Example: 237040
-
 - energy
   - number [float]
   - Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy.
   - Example: 0.842
-
-- id
-  - string
-  - The Spotify ID for the track.
-  - Example: "2takcwOaAZWiXQijPHIx7B"
 
 - instrumentalness
   - number [float]
