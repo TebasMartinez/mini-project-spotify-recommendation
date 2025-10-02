@@ -16,7 +16,7 @@ def main():
 
     # Session set up
     if "trendy" not in st.session_state:
-        # Session variables/dictionaries/model
+        # Session variables/dictionaries
         st.session_state.mood = ""
         st.session_state.trendy = f.find_top100()
         st.session_state.clustered_df = pd.read_csv("data/labeled_audio_features_dataset_curated.csv", index_col=0)
