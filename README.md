@@ -1,6 +1,6 @@
 # Mini Project: Spotify Recommendation
 
-Streamlit-powered music recommender. It recommends one of the top 100 songs from Billboard if the user chooses "trendy", or a random song from a given dataset clustered with KMeans when a user chooses another option.
+Streamlit-powered music recommender. It recommends one of the top 100 songs from Billboard if the user chooses "Recommend trendy song!", or three random music pieces from a given dataset clustered with KMeans when the user chooses "Choose a mood".
 
 ## Unsupervised Model
 KMeans has been used to cluster the given music dataset. After trying different version, v6 with 5 clusters has been used for the app, which uses the following features: danceability, energy, instrumentalness, valence, tempo, and acousticness.
